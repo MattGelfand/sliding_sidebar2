@@ -72,6 +72,7 @@ NORMALIZE.css
 
 	a {
  	text-decoration: none;
+ 	color:#2ecc71;
 	}
 
 	a:visited {
@@ -89,194 +90,118 @@ NORMALIZE.css
 /*===================================== MAIN MOBILE STYLES ======================================*/
 
 	html { 
-		font-family: "garamond-premier-pro-caption", serif;
-	}
+	background: url('../img/lamp.png') 0 0 no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+	font-family: "cubano";
+}
 
 	.container {
-		margin: 0 auto;
+	margin: 0 auto;
+	}
+
+	.contain {
+	padding:0 1em;
+	}
+
+	.container > div, section {
+	min-height: 100vh;
+	}
+
+	/*.words:before {
+	background: url("../img/me-up.jpg") 0 0;
+	background-size: cover;
+	height: 100vh;
+
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	display: block;
+	}*/
+
+	.words {
+	z-index: 0;
+	font-size: 3em;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 200;
+	}
+
+	.on-dark {
+	color:#fff;
+	}
+
+	.highlight {
+	padding: .1em;
+	cursor: pointer;
+	font-weight: bolder;
+	
+	position: relative;
+	border-radius:12px;
+	}
+
+	.hash {
+	color:#f1c40f;
+	}
+
+	.highlight:active { top: 1px; }
+
+	.main {
+	background: #2ecc71; /*green*/
+	padding: 6em 0;
+	z-index: 1;
+	}
+
+	.main-br {
+	background:url('../img/subtle_dots.png') 0 0;
+	margin: 0 auto;
+	position: relative;
+	}
+
+	.textlrg {
+	font-size: 3em;
+	color: #f1c40f; /*blue*/
+	text-transform: uppercase;
+	background: #2ecc71;
+	padding-bottom: 1.2em;
+	text-align: center;
+	}
+
+	.face {
+	max-width: 40%;
 	}
 
 	.row {
-		margin: 0 auto;
-		position: relative;
+	margin: 0 auto;
+	position: relative;
+	padding: 3.2em 0;
 	}
 
-	.phead {
-		width: 100%;
-		background: #bdc3c7;
-		position: fixed;
-		top:0;
-		height: 50px;
-		opacity: .4;
-		z-index: 1;
+	footer {
+	background: #2c3e50;
+	padding: 3.2em 0;
 	}
 
-	.subtext {
-		font-size: 12px;
-		text-transform: uppercase;
-		padding: 10px 0 0 0;
-		font-weight: 400;
+	footer p {
+	text-align: center;
 	}
-
-	.threesome {
-		position: relative;
-		height: 1000px;
-	}
-
-	.threesome > div {
-		min-height: 100%;
-		position: relative;
-		background: #f1c40f;
-		cursor: pointer;
-	}
-
-	.threesome > div:hover {
-		background: #222;
-		color:#f1c40f;
-
-    	-webkit-transition: .2s ease all;
-    	-moz-transition: .2s ease all;
-    	-ms-transition: .2s ease all;
-    	-o-transition: .2s ease all;
-    	transition: .2s ease all;
-	}
-
-	.threesome p {
-		color:#f1c40f;
-		opacity: 0;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		bottom: 0;
-		left:0;
-		top:50%;
-		font-size: 36px;
-		padding: 0 30px;
-		text-align: center;
-
-	-webkit-transition: .2s ease all;
-	-moz-transition: .2s ease all;
-	-ms-transition: .2s ease all;
-	-o-transition: .2s ease all;
-	transition: .2s ease all;
-
-	-webkit-transform:translateY(13px);
-	-moz-transform:translateY(13px);
-	-ms-transform:translateY(13px);
-	-o-transform:translateY(13px);
-	transform:translateY(13px);
-	}
-
-	.threesome p:hover {
-	opacity: 1;
-
-	-webkit-transition: .2s ease all;
-	-moz-transition: .2s ease all;
-	-ms-transition: .2s ease all;
-	-o-transition: .2s ease all;
-	transition: .2s ease all;
-
-	-webkit-transform:translateY(-13px);
-	-moz-transform:translateY(-13px);
-	-ms-transform:translateY(-13px);
-	-o-transform:translateY(-13px);
-	transform:translateY(-13px);
-	}
-
-	.container > div {
-		padding: 3.2em 0;
- 	}
-
-	.testies {
-		background: #f1c40f;
-		padding: 140px 0;
-	}	
 
 	#sidebartoggler {
-		display: none;
-   	}
-
-   	.quote {
-   		background: url('../img/speckle.jpg') no-repeat 0 0;
-   		background-size: cover;
-   		background-attachment: fixed;
-		padding: 10px;
-   		margin: 0 auto;
-   	}
-
-   	.contain {
-   		max-width: 50%;
-   		margin: 0 auto;
-   	}
-	
-	.txtmed {
-		font-size: 30px;
+	display: none;
 	}
-   	
-   	.txtlarge {
-   		font-size: 50px;
-   		position: absolute;
-   		top:30%;
-   		left:50%;
-   		margin-left:-100px;
-    }
-
-    .txtlarge:hover {
-    	
-    }
-
-    .subhead {
-    	text-transform: uppercase;
-    	text-decoration: underline;
-    	letter-spacing: 1.1;
-    	position: absolute;
-    	left:0;
-    	top:0;
-    	background: black;
-    	color: white;
-    }
-
-    .txtlarger {
-    	font-size: 70px;
-    	font-weight: 300;
-    }
-
-    .contact {
-    	text-align: center;
-    	background: #222;
-    	color:#f1c40f;
-    }
-
-   	.contact li {
-   		display: inline-block;
-   		margin: 4.8em 3.2em;
-   		color:#f1c40f;
-   	}
-
-   	.footerimg {
-   		background: url('../img/hero.png') no-repeat 0 0;
-   		background-size: cover;
-   		background-attachment: fixed;
-		padding: 100px;
-   	}
-
-	.hero {
-		background: url('../img/notme.png') no-repeat 0 0;
-		background-size: cover;
-		background-attachment: fixed;
-		padding: 100px;
-		height: 100vh;
-   	}
-
-   	.homebase {
-   		position: absolute;
-   		top:20px;
-   		left: 20px;
-   	}
 
 
-	/* Slider 
 
+
+   
 
 
 
@@ -321,6 +246,25 @@ NORMALIZE.css
 
 	.column.flow-opposite { 
 	float: right; 
+	}
+
+	/*======= Custom Styles =======*/
+	
+
+	.main-br {
+	max-width: 70%;
+	}
+
+	.words {
+	font-size: 6em;
+	}
+
+	.textlrg {
+	font-size: 5em;
+	position: absolute;
+	top:20%;
+	left:-2%;
+	background: none;
 	} 
 }
 
