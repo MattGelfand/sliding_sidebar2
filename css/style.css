@@ -40,7 +40,7 @@ NORMALIZE.css
 
 	body {
 	font-size: 100%;
-	overflow: hidden;
+	height: 100%;
 	}
 
 
@@ -91,14 +91,30 @@ NORMALIZE.css
 
 	}
 
+	a:active {
+
+	}
+
+	.color {
+		color:yellow;
+	}
+
+	.colorr {
+		color:black;
+	}
+
 /*===================================== MAIN MOBILE STYLES ======================================*/
 
 	html { 
 	font-family: "ratio";
+	height: 100%;
 	}
 
 	.container {
 	margin: 0 auto;
+	min-height: 100%;
+	background: #fff;
+
 	}
 
 	.page-content {
@@ -111,10 +127,159 @@ NORMALIZE.css
 	transition: all 1.15s ease-out 0;
 	}
 
+	header {
+	font-family: "flood-std";
+	position: relative;
+	text-align: center;
+	padding:0 0 30em 0;
+	}
+
+	.header-inner {
+	position: fixed;
+	width: 500px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	z-index: -9999;
+
+
+	}
+
+	header h2 {
+	color:#2ecc71;
+	}
+
 	.toggle {
 	z-index: 1;
 	cursor: pointer; 
 	}
+
+	#sidebartoggler {
+	display: none;
+	}
+
+	.toggle-icon {
+	text-decoration: none;
+	font-size: 30px;
+	color: black;
+	-webkit-transition: all 0.15s ease-out 0;
+	-moz-transition: all 0.15s ease-out 0;
+	transition: all 0.15s ease-out 0;
+	top: 20px;
+	right: 20px;
+	z-index: 2;
+	cursor: pointer;
+	position: absolute;
+	}
+
+	.sidebar {
+	position: fixed;
+	top: -100px;
+	right: 0;
+	width: 100%;
+	padding: 30px;
+	background: #222;
+	z-index: 0;
+	border-left: 1px solid #222;
+
+	-webkit-transition: all 1.15s ease-out 0;
+	-moz-transition: all 1.15s ease-out 0;
+	transition: all 1.15s ease-out 0; 
+
+	}
+
+	#sidebartoggler:checked + .container .sidebar {
+	top: 0; 
+	}
+
+	#sidebartoggler:checked + .container .page-content {
+	padding-top:100px;
+
+	-webkit-animation: slide ease-in-out 2s;
+	-moz-animation: slide 2s;
+	-ms-animation: slide 2s;
+	-o-animation: slide 2s;
+	animation: slide ease-in-out 2s;
+}
+
+	.boxes {
+	text-align: center;
+	}
+	
+
+	.box li {
+	background: green;
+	padding:10px;
+	margin:20px 0;
+	}
+	
+
+
+
+
+/*==================== OBJECTS ==================*/
+
+.center {
+	top:50%;
+	left:50%;
+	position: absolute;
+
+	-webkit-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+}
+
+.contain {
+	padding:0 1em;
+}
+
+
+
+
+
+/*===================================== MEDIA QUERIES ======================================*/
+
+
+
+
+/* Medium screen breakpoint (640px) */
+@media (min-width: 40rem) {
+  
+	.column {
+	float: left;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	}
+
+	.column.full { 
+	width: 100%; 
+	}
+
+	.column.two-thirds { 
+	width: 66.7%; 
+	}
+
+	.column.half { 
+	width: 50%; 
+	}
+
+	.column.third { 
+	width: 33.3%; 
+	}
+
+	.column.fourth { 
+	width: 25%; 
+	}
+
+	.column.flow-opposite { 
+	float: right; 
+	}
+
+	/*======= Custom Styles =======*/
+
 
 	.toggle-icon {
 	text-decoration: none;
@@ -134,8 +299,8 @@ NORMALIZE.css
 	position: fixed;
 	top: 0px;
 	bottom: 0px;
-	right:  -100px;
-	width: 100px;
+	right:  -66.6%;
+	width: 66.6%;
 	padding: 30px;
 	background: #fff;
 	z-index: 0;
@@ -149,31 +314,33 @@ NORMALIZE.css
 	.sidebar li {
 	}	
 
-	#sidebartoggler {
-	display: none;
-	}
-
 	#sidebartoggler:checked + .container .sidebar {
 	right: 0; 
 	}
 
 	#sidebartoggler:checked + .container .page-content {
+	padding-right: 66.6%;
 
-	-webkit-animation: slide 2s;
+	-webkit-animation: slide ease-in-out 2s;
 	-moz-animation: slide 2s;
 	-ms-animation: slide 2s;
 	-o-animation: slide 2s;
-	animation: slide 2s;
+	animation: slide ease-in-out 2s;
+	
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
 	}
 
 	@-webkit-keyframes slide {
 	
 		0% {
 			opacity: 1;
+
 		}
 
 		100% {
-			opacity: 0;
+			opacity: .9;
 		}
 	}
 
@@ -254,77 +421,8 @@ NORMALIZE.css
 
 	.clientimg {
 	background: url('../img/me_small.png') 0 0 no-repeat;
-	overflow: hidden;
-
+	background: red;
 	}
-
-
-
-
-/*==================== OBJECTS ==================*/
-
-.center {
-	top:50%;
-	left:50%;
-	position: absolute;
-
-	-webkit-transform:translate(-50%, -50%);
-	-moz-transform:translate(-50%, -50%);
-	-ms-transform:translate(-50%, -50%);
-	-o-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-}
-
-.contain {
-	padding:0 1em;
-}
-
-
-
-
-
-/*===================================== MEDIA QUERIES ======================================*/
-
-
-
-
-/* Medium screen breakpoint (640px) */
-@media (min-width: 40rem) {
-  
-	.column {
-	float: left;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	}
-
-	.column.full { 
-	width: 100%; 
-	}
-
-	.column.two-thirds { 
-	width: 66.7%; 
-	}
-
-	.column.half { 
-	width: 50%; 
-	}
-
-	.column.third { 
-	width: 33.3%; 
-	}
-
-	.column.fourth { 
-	width: 25%; 
-	}
-
-	.column.flow-opposite { 
-	float: right; 
-	}
-
-	/*======= Custom Styles =======*/
-	
-
-
 
 
 	
