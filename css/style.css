@@ -95,17 +95,18 @@ NORMALIZE.css
 /*===================================== MAIN MOBILE STYLES ======================================*/
 
 	html { 
-		font-family: "acta-display";
-		height: 100%;
-		background:#fff;
-		padding: 5%;
-		color:rgba(0, 0, 0, 0.7);
+		min-height: 100%;
+ 		padding: none;
 	}
 
 	body {
 		font-size: 100%;
 		height: 100%;
-		/*background: url('../img/footer_lodyas_green.png') 0 0 repeat;*/
+ 		margin: 0 auto;
+		/*background: url('../img/footer_lodyas.png') 0 0 repeat;*/
+		position: relative;
+		width: 100%;
+		z-index: 2;
 	}
 
 	.container {
@@ -113,14 +114,27 @@ NORMALIZE.css
 	 	position: relative;
 	}
 
-	header {
-		padding-bottom: 50px;
+	.row:nth-child(even) {
+		background: #fff;
+	}
+
+	.row:nth-child(odd) {
+		background: #f7f7f7;
+	}
+
+	.row {
+		padding:4em 1.6em;
+		margin-top:-5px;
+		-webkit-transform:skew(-10deg) rotate(-10deg) translateY(10px);
+		box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
+	}
+
+	.row > div {
+		-webkit-transform:skew(10deg) rotate(10deg) translateY(-10px);
 	}
 
 	.page-content {
 		z-index: 1;
-		background: red;
-		position: relative;
 		width: 100%;
 		margin: 0 auto;
 
@@ -131,86 +145,34 @@ NORMALIZE.css
 		transition:.2s ease all; 
 	}
 
-	#about, #work, #process {
+	.expand > div {
 		display: none;
 	}
 
-	.overlay {
+		.overlay-2 {
 		position: fixed;
 		color:rgba(0, 0, 0, 0.7);
-		bottom:  -100%; /* how far below the viewport */
+		top:  -105%; /* how far below the viewport */
  		font-weight: 700;
 		text-align: center;
 		margin: 0 auto;
-		z-index: 2;
-		width: 90%;
+		z-index: 3;
+		background: red;
 		height: 100%;
+		width: 100%;
 		-webkit-transition:.2s ease all;
 		-moz-transition:.2s ease all;
 		-ms-transition:.2s ease all;
 		-o-transition:.2s ease all;
-		transition:.2s ease all; 
-		background: pink;
+		transition:.2s ease all;
 	}
 
-	.overlay-2 {
-		position: fixed;
-		color:rgba(0, 0, 0, 0.7);
-		top:  -50%; /* how far below the viewport */
- 		font-weight: 700;
-		text-align: center;
-		margin: 0 auto;
-		z-index: 2;
-		width: 90%;
-		height: 50%;
-		-webkit-transition:.2s ease all;
-		-moz-transition:.2s ease all;
-		-ms-transition:.2s ease all;
-		-o-transition:.2s ease all;
-		transition:.2s ease all; 
-		background: green;
+	.text-small {
+		z-index: 9999;
 	}
 
-	.overlay-3 {
-		position: fixed;
-		color:rgba(0, 0, 0, 0.7);
-		left:  -90%; /* how far below the viewport */
- 		font-weight: 700;
-		text-align: center;
-		margin: 0 auto;
-		z-index: 2;
-		width: 90%;
-		height: 50%;
-		-webkit-transition:.2s ease all;
-		-moz-transition:.2s ease all;
-		-ms-transition:.2s ease all;
-		-o-transition:.2s ease all;
-		transition:.2s ease all; 
-		background: orange;
-	}
-
-	#about:checked + .container .overlay { /*how far from the bottom of the viewport text moves up*/
-		bottom: -20%;
-
-		-webkit-transition:.2s ease all;
-		-moz-transition:.2s ease all;
-		-ms-transition:.2s ease all;
-		-o-transition:.2s ease all;
-		transition:.2s ease all; 
-	}
-
-	#work:checked + .container .overlay-2 { /*how far from the bottom of the viewport text moves up*/
-		top: 50%;
-
-		-webkit-transition:.2s ease all;
-		-moz-transition:.2s ease all;
-		-ms-transition:.2s ease all;
-		-o-transition:.2s ease all;
-		transition:.2s ease all; 
-	}
-
-	#process:checked + .container .overlay-3 { /*how far from the bottom of the viewport text moves up*/
-		left: 90%;
+	.menu-overlay:checked ~ .container .overlay-2 { /*how far from the bottom of the viewport text moves up*/
+		top: 0;
 
 		-webkit-transition:.2s ease all;
 		-moz-transition:.2s ease all;
@@ -225,30 +187,37 @@ NORMALIZE.css
 		-ms-transform:translateX(-110px) translateY(-60px);
 		-o-transform:translateX(-110px) translateY(-60px);
 		transform:translateX(-110px) translateY(-60px);*/
-	}
-	
-	.menu {
-		background: blue;
-		position: absolute;
-		bottom: 0;
-		right: 0;
+
+	.work {
+		color:rgba(0, 0, 0, 0.7);
+		font-family: 'tablet-gothic-wide';
+		font-weight: 200;
 	}
 
-	.menu li {
-		display: inline-block;
-		font-weight: 800;
-	}
-
-	.menu li:active {
+	.home {
+		background: url('../img/footer_lodyas.png') 0 0 repeat;
+		-webkit-transform:skew(-10deg) rotate(-10deg) translateY(10px);
+		padding: 100px;
 		position: relative;
-		top:1px;
-		opacity: 1;
 	}
 
-	.name {
-		width: 80%;
-		margin: 0 auto;
-		text-align: left;
+	.home h1, .home h2 {
+		-webkit-transform:skew(10deg) rotate(10deg) translateY(-10px);
+		width: 200px;
+	}
+
+	.process {
+		padding:1.6em 0;
+	}
+
+
+/*=============== Text Styles ==============*/
+
+	.text-lrg {
+		text-transform: uppercase;
+		font-weight: 200;
+		letter-spacing: 2px;
+		cursor: pointer;
 	}
 
 	.text-med {
@@ -259,7 +228,37 @@ NORMALIZE.css
 		font-size: .4em;
 		text-align: left;
 		padding: .5em;
-		font-weight: 300;
+	}
+
+	.highlight {
+		color: #222;
+	}
+
+	.head:after {
+		content:"";
+		display: block;
+		position: absolute;
+		width: 20%;
+		margin-top: 10px;
+		height: 0px;
+		border-top:1px solid #fff;
+	}
+
+	.head {
+		padding-bottom: 20px;
+	}
+
+	.subhead {
+		text-transform: uppercase;
+		opacity: .6;
+		font-family: "tablet-gothic-wide";
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+
+	.subhead-med {
+		text-transform: uppercase;
+		font-size: 1.1em;
 	}
 
 
@@ -292,7 +291,11 @@ NORMALIZE.css
 
 /* Medium screen breakpoint (640px) */
 @media (min-width: 40rem) {
-  
+  	
+  	html {
+  		padding: 15px;
+  	}
+
 	.column {
 	float: left;
 	padding-left: 1rem;
