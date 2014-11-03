@@ -2,11 +2,14 @@
 $(".words").fitText(1.2, { minFontSize: '20px', maxFontSize: '50px' });
 
 
-$('a').smoothScroll();
+//$('a').smoothScroll();
 
+
+$('.extended').addClass('hide');
 
 $(function() {
-	$('.text-lrg').click(function() {
-		$('.expand > div').toggle(100)
+	$('.text-lrg').on("click", "a", function(event) {
+		event.preventDefault();
+		$(this).parent().siblings('.extended').toggleClass('hide');
 	});
 });

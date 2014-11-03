@@ -96,10 +96,7 @@ NORMALIZE.css
 
 	html { 
 		min-height: 100%;
- 		padding: none;
- 		/*background: #2ecc71;*/
  		background: url('../img/footer_lodyas.png') 0 0 repeat;
- 		
 	}
 
 	body {
@@ -125,15 +122,19 @@ NORMALIZE.css
 	}
 
 	.row {
-		padding:4em 1.6em;
+		padding: 4em 0;
 		margin-top:-10px;
 		-webkit-transform:skew(-10deg) rotate(-10deg) translateY(10px);
-		/*box-shadow: 0px -1px 3px rgba(0,0,0,0.4);*/
+		box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
 	}
 
 	.row > div {
 		-webkit-transform:skew(10deg) rotate(10deg) translateY(-10px);
 	}
+
+	/*.row:first-of-type {
+		background: #e67e22;
+	}*/
 
 	.page-content {
 		z-index: 1;
@@ -147,8 +148,66 @@ NORMALIZE.css
 		transition:.2s ease all; 
 	}
 
-	.expand > div {
-		display: none;
+	.hide {  /*better than 'none' for accessibility */
+		position: absolute;
+		top:-9999px;
+		left:-9999px;
+		height: 0;
+
+		-webkit-transition:1.2s ease all;
+		-moz-transition:1.2s ease all;
+		-ms-transition:1.2s ease all;
+		-o-transition:1.2s ease all;
+		transition:1.2s ease all; 
+	}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.hero-img {
+		padding: 1.6em 0;
+	}
+
+	.common {
+		background: url('../img/post-its.jpg') 0 0 no-repeat;
+		background-size: cover;
+		padding: 100px;
+	}
+
+	.hero-img-looped-in {
+		background: url('../img/looped-in-splash.jpg') 0 0 no-repeat;
+		background-size: cover;
+		padding: 100px;
+	}
+
+	.heroes-below {
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.img-size {
+		width: 400px;
+		height: 400px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.heroes-below li {
+		display: inline-block;
+		margin:-5px 0; padding:0;
 	}
 
 	.work {
@@ -164,13 +223,8 @@ NORMALIZE.css
 		position: relative;
 	}
 
-	.home h1, .home h2 {
-		-webkit-transform:skew(10deg) rotate(10deg) translateY(-10px);
-		width: 200px;
-	}
-
 	.process {
-		padding:1.6em 0;
+		padding:3.2em 0;
 	}
 
 
@@ -186,7 +240,7 @@ NORMALIZE.css
 		z-index: 3;
 		background: #fff;
 		height: 100%;
-		width: 100%;
+		width: 90%;
 		-webkit-transition:.3s ease all;
 		-moz-transition:.3s ease all;
 		-ms-transition:.3s ease all;
@@ -211,14 +265,19 @@ NORMALIZE.css
 		transition:.3s ease all; 
 	}
 
+	.menu-overlay:checked ~ .container .page-content { /*how far from the bottom of the viewport text moves up*/
+		-webkit-filter: grayscale(0.5);
+		opacity: .5;
+	}
+
 	.cross {
 		font-size: 40px;
 		color: #222;
 		cursor: pointer;
 	}
 
-	.plus {
-		font-size: 40px;
+	.dots {
+		font-size: 60px;
 		color:#fff;
 		padding:10px;
 		cursor: pointer;
@@ -236,6 +295,7 @@ NORMALIZE.css
 		font-weight: 200;
 		letter-spacing: 2px;
 		cursor: pointer;
+		margin-left: -28px;
 	}
 
 	.text-med {
@@ -277,6 +337,7 @@ NORMALIZE.css
 	.subhead-med {
 		text-transform: uppercase;
 		font-size: 1.1em;
+		padding: 3.2em 0 0 0;
 	}
 
 
@@ -294,9 +355,13 @@ NORMALIZE.css
 	transform:translate(-50%, -50%);
 }
 */
-.contain {
-	padding:0 1em;
-}
+	.contain {
+		padding:0 1.6em;
+	}
+
+	.hero-img {
+		margin: 3.2em 0;
+	}
 
 
 
