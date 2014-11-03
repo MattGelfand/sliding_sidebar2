@@ -10,36 +10,28 @@
 <!--remember to change favicon-->
 </head>
 <body>
-	<input type="radio" id="toggle-icon" class="about" name="toggle-group" value="about">
-	<input type="radio" id="toggle-icon" class="menu-overlay" name="toggle-group" value="process">
+	<input type="radio" id="toggle-icon-1" class="menu-close" name="toggle-group" value="close">
+	<input type="radio" id="toggle-icon" class="menu-overlay" name="toggle-group" value="overlay">
 	
 
 	<div class="container">
 
-		<div class="overlay-2">✖
+		<nav class="overlay-2">
+			<label for="toggle-icon-1" class="cross">✖</label>
 			<ul>
 				<li>Work</li>
 				<li>About</li>
 				<li>Process</li>
 			</ul>
-		</div>
+		</nav>
 
-		<section class="page-content contain">
+		<section class="page-content">
 
-			<nav class="menu">
-				<ul>
-					<li class="text-small">
-						<label for="toggle-icon">✖</label>
-					</li>
-					
-					<li class="text-small">
-						<label for="toggle-icon">✚</label>
-					</li>
-				</ul>
-			</nav>
+			<div class="overlay-toggle">
+				<label for="toggle-icon" class="plus">⋯</label>
+			</div>
 			
 			<section class="work">
-				
 				<div class="row clearfix">
 					<div class="column third">
 						<span>2014</span>
@@ -117,10 +109,7 @@
 					</div>
 				</div>
 			</section><!--work-->
-
 		</section><!--pagecontent-->
-
-		
 	</div><!--container-->
 	
 
