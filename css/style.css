@@ -97,6 +97,8 @@ NORMALIZE.css
 	html { 
 		min-height: 100%;
  		background: url('../img/footer_lodyas.png') 0 0 repeat;
+ 		font-family: 'tablet-gothic-wide';
+
 	}
 
 	body {
@@ -212,7 +214,6 @@ NORMALIZE.css
 
 	.work {
 		color:rgba(0, 0, 0, 0.7);
-		font-family: 'tablet-gothic-wide';
 		font-weight: 200;
 	}
 
@@ -225,6 +226,32 @@ NORMALIZE.css
 
 	.process {
 		padding:3.2em 0;
+	}
+
+	.icons {
+		width: 150px;
+		display: inline-block;
+		position: absolute;
+		top:80px;
+		right: 0;
+		z-index: 1;
+		padding-right: 15px;
+		opacity: .7;
+	}
+
+	.icons li {
+		margin: 10px 0;
+		text-transform: uppercase;
+		float: right;
+	}
+
+	.icon-desc {
+		float:left;
+		vertical-align: center;
+		position: relative;
+		top:10px;
+		letter-spacing: 1px;
+		font-size: 12px;
 	}
 
 
