@@ -93,12 +93,13 @@ NORMALIZE.css
 
 
 /*===================================== MAIN MOBILE STYLES ======================================*/
-
+	
 	html { 
 		min-height: 100%;
  		font-family: "prenton-ultra-condensed";
  		font-weight: 200;
  		overflow-x:hidden;
+ 		text-transform: uppercase;
 
 	}
 
@@ -129,7 +130,7 @@ NORMALIZE.css
 		-moz-animation-fill-mode:forwards;
 		-ms-animation-fill-mode:forwards;
 		-o-animation-fill-mode:forwards;
-		animation-fill-mode:forwards;
+		
 
 		-webkit-animation-duration: 1s;
 		-moz-animation-duration: 1s;
@@ -147,35 +148,48 @@ NORMALIZE.css
 			opacity: 1;
 		}
 	}
-	/*
-	.row:nth-child(even) {
+
+	.row {
+		padding: 1.6em 0 3.2em 0;
+		margin-left: 15%;
+	}
+
+	.column {
 		
 	}
 
-	.row:nth-child(odd) {     
-		background: #f7f7f7;
-	}
-
-	.row {
+	/*.row {
 		padding: 2em 0;
 		-webkit-transform:skew(-10deg) rotate(-10deg) translateY(-85px);
 		-webkit-backface-visibility: hidden;
 		-webkit-transform: translateZ(0) scale(1.0, 1.0);
 		box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
+	*/
+
+	.expand {
+		text-align: left;
 	}
 
-	.row > div {
-		
+	.btn {
+		background: olive;
+		font-size: 14px;
+		color:white;
+		padding: .5em 2em;
+		letter-spacing: .1em;
+		border-radius: 3px;
+		-webkit-transition:.1s ease all;
+		-moz-transition:.1s ease all;
+		-ms-transition:.1s ease all;
+		-o-transition:.1s ease all;
+		transition:.1s ease all;
 	}
 
-	.row:first-of-type {
-		background: #e67e22;
-	}*/
+	.btn:hover {
+		box-shadow: 0px 0px 0px 1px olive inset, 0px 0px 0px 2px white inset;
+	}
 
 	.page-content {
-		width: 75%;
-		margin: 0 auto;
-		text-align: center;
+		margin:0 auto;
 
 		-webkit-transition:.2s ease all;
 		-moz-transition:.2s ease all;
@@ -198,12 +212,14 @@ NORMALIZE.css
 	}
 
 	.icons {
-		margin: 20px 0;
+		margin: 20px 0;	
 	}
 
 	.icons li {
 		display: inline-block;
-		margin: 0 10px;
+		margin: 0 5px;
+		position: relative;
+		
 	}
 
 	.common {
@@ -248,16 +264,6 @@ NORMALIZE.css
 		padding: 0;
 	}
 
-	.heroes-below li {
-		display: inline-block;
-		margin:-5px 0; padding:0;
-	}
-
-	.work {
-		color:rgba(0, 0, 0, 0.7);
-		font-weight: 200;
-	}
-
 	.process {
 		padding:3.2em 0;
 	}
@@ -283,15 +289,11 @@ NORMALIZE.css
 		font-size: 30px;
 	}
 
-	.email {
-		font-size: 20px;
-		text-align: center;
-		padding: 1.6em 0;
-	}
-
 	.social-links {
 		padding: 1.6em 0 2.4em 0;
 	}
+
+
 
 
 
@@ -300,7 +302,7 @@ NORMALIZE.css
 	.overlay {
 		position: fixed;
 		color:rgba(0, 0, 0, 0.7);
-		left:  -75%; /* how far below the viewport */
+		left: -75%; /* how far below the viewport */
 		font-weight: 700;
 		text-align: center;
 		margin: 0 auto;
@@ -384,58 +386,22 @@ NORMALIZE.css
 
 /*=============== Text Styles ==============*/
 
-	.text-lrg {
-		text-transform: uppercase;
+	.header-text {
 		font-weight: 200;
-		letter-spacing: 2px;
-		cursor: pointer;
-		line-height: 1.3;
-		font-size: 90px;
+		font-size: 50px;
 	}
 
-	.text-med {
-		font-size: .8em;
+	.graph-text {
+		text-transform: lowercase;
+		font-size: 23px;
+		margin-bottom: 1.6em;
 	}
 
-	.text-small {
-		font-size: .5em;
-		text-align: left;
-		padding: .5em;
-	}
-
-	.subhead {
-		text-transform: uppercase;
-		opacity: .6;
-		font-weight: 400;
-		letter-spacing: 2px;
-	}
-
-	.subhead-med {
-		text-transform: uppercase;
-		font-size: 1.1em;
-		padding: 3.2em 0 0 0;
-	}
-
-	.text-small {
-		text-transform: uppercase;
-		font-size: 15px;
-		text-align: center;
-		font-weight: 200;
-	}
-
-	.footer-caps-head {
-		font-weight: 300;
-		text-transform: uppercase;
-		font-size: 30px;
-		letter-spacing: 3px;
-	}
-
-	.footer-caps-subhead {
-		font-weight: 200;
-		text-transform: uppercase;
-		font-size: 12px;
-		letter-spacing: 1px;
-		opacity: .8;
+	.tiny-caps {
+		font-size: 25px;
+		opacity: .4;
+		vertical-align: sub;
+		padding: 0 5px;
 	}
 
 	.email-text {
@@ -444,6 +410,7 @@ NORMALIZE.css
 		text-align: center;
 		padding: .8em 0 1.6em 0;
 	}
+
 
 
 /*==================== OBJECTS ==================*/
@@ -462,13 +429,12 @@ NORMALIZE.css
 */
 	.contain {
 		padding:0 1.6em;
+		vertical-align: sub;
 	}
-
+	
 	.hero-img {
-		margin: 3.2em 0;
+		margin: 3.2em 0 1.6em 0;
 	}
-
-
 
 
 

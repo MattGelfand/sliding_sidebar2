@@ -2,7 +2,7 @@
 $(".words").fitText(1.2, { minFontSize: '20px', maxFontSize: '50px' });
 
 
-//$('a').smoothScroll();
+$('a').smoothScroll();
 
 
 $('.extended').addClass('hide');
@@ -10,6 +10,8 @@ $('.extended').addClass('hide');
 $(function() {
 	$('.expand').on("click", "a", function(event) {
 		event.preventDefault();
-		$(this).parent().siblings('.extended').toggleClass('hide');
+		$(this).parent().siblings('.extended').toggleClass("hide");
 	});
 });
+
+
