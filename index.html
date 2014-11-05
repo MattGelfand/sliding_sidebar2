@@ -9,58 +9,25 @@
 <script>try{Typekit.load();}catch(e){}</script>
 <!--remember to change favicon-->
 </head>
-<body>
-	<input type="radio" id="toggle-icon-1" class="menu-close" name="toggle-group" value="close">
-	<input type="radio" id="toggle-icon" class="menu-overlay" name="toggle-group" value="overlay">
-
-
-<section class="icons">
-	<ul>
-		<li>
-			<span class="icon-desc"><span>Code</span> 
-			<img src="img/code.svg" type="image/svg+xml" alt="">
-			</li>
-
-			<li>
-				<span class="icon-desc"><span>Strategy</span> 
-				<img src="img/light_bulb.svg" type="image/svg+xml" alt="">
-			</li>
-
-			<li>
-				<span class="icon-desc"><span>UI</span>
-				<img src="img/ui-img.svg" type="image/svg+xml" alt="">
-			</li>
-
-			<li>
-				<span class="icon-desc"><span>UX</span>
-				<img src="img/ux.svg" type="image/svg+xml" alt="">
-			</li>
-
-			<li>
-				<span class="icon-desc"><span>Mobile</span>
-				<img src="img/mobile.svg" type="image/svg+xml" alt="">
-			</li>
-		</ul>
-</section>
+<body fadeIn>
+	<input type="radio" id="toggle-icon-1" name="toggle-group" value="close">
+	<input type="radio" id="toggle-icon" name="toggle-group" value="overlay">
 	
 
 	<div class="container">
 
-		<nav class="overlay-2">
-			<label for="toggle-icon-1" class="cross">✖</label>
+		<nav class="overlay">
+			<label for="toggle-icon" class="dots">⋯</label>
+			<label for="toggle-icon-1" class="cross">×</label>
 			<ul>
 				<li>Work</li>
 				<li>About</li>
 				<li>Process</li>
+				<p class="rotate">Matt Gelfand</p>
 			</ul>
 		</nav>
 
 		<section class="page-content">
-
-			<div class="overlay-toggle">
-				<label for="toggle-icon" class="dots">⋯</label>
-			</div>
-			
 			<section class="work">
 				
 				<div class="row clearfix" id="common">
@@ -71,6 +38,13 @@
 					<div class="column two-thirds expand">
 						<span class="subhead contain">project</span>
 						<h1 class="text-lrg contain"><a href="#common">Common</a></h1>
+
+						<section class="icons contain">
+							<ul>
+								<li><img src="img/mobile.svg" alt="" /></li>
+								<li><img src="img/mobile.svg" alt="" /></li>
+							</ul>
+						</section>
 						
 						<div class="hero-img common"></div>
 						
@@ -92,15 +66,8 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat voluptate molestias ab. Optio cumque molestiae rem ab voluptate, deserunt nam eos enim necessitatibus, voluptatibus, officiis dolor iusto expedita sapiente.</p>
 							</div>
 
-							<div class="heroes-below">
-								<ul>
-									<li><img class="img-size" src="img/mind-map-1.jpg" alt=""></li>
-									<li><img class="img-size" src="img/mind-map-2.jpg" alt=""></li>
-									<li><img class="img-size" src="img/post-its-2.jpg" alt=""></li>
-								</ul>
-							</div>
 						</div><!--extended-->
-					</div>
+					</div><!--column-->
 				</div>
 
 				<div class="row clearfix" id="espn">
@@ -110,7 +77,7 @@
 					
 					<div class="column two-thirds">
 						<span class="subhead contain">project</span>
-						<h1 class="text-lrg contain"><a href="#espn">ESPN Onboarding</a></h1>
+						<h1 class="text-lrg contain"><a href="#espn">"Sportscenter" App</a></h1>
 
 						<div class="hero-img espn"></div>
 
@@ -132,13 +99,6 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat voluptate molestias ab. Optio cumque molestiae rem ab voluptate, deserunt nam eos enim necessitatibus, voluptatibus, officiis dolor iusto expedita sapiente.</p>
 							</div>
 
-							<div class="heroes-below">
-								<ul>
-									<li><img class="img-size" src="img/mind-map-1.jpg" alt=""></li>
-									<li><img class="img-size" src="img/mind-map-2.jpg" alt=""></li>
-									<li><img class="img-size" src="img/post-its-2.jpg" alt=""></li>
-								</ul>
-							</div>
 						</div><!--extended-->
 					</div>
 				</div>
@@ -191,25 +151,33 @@
 				</div>
 			</section><!--work-->
 
-			
-			<footer class="contact-btm">
-			 
-						<div class="name">
-							<h1>Matt Gelfand</h1>
-							<h2>UX DESIGN&#183; UI DESIGN&#183; FRONT-END DEV &#183; CONTENT</h2>
-						</div>
+			<footer>
+				<div class="name">
+					<h1 class="footer-caps-head">Matt Gelfand</h1>
+					<p>UX &#8226; UI &#8226; Front-End Dev</p>
+				</div>
 
-						<div class="quicklinks">
-							<p>Work</p>
-							<p>About & Contact</p>
-						</div>
+				<div class="lower-nav">
+					<p>Work</p>|
+					<p>About</p>
+				</div>
 
-						<div class="social-links">
-							<p>giant email</p>
-							<p>social links go here</p>
-						</div>
-				 
+				<div class="email">
+					<p>matthew.gelfand@gmail.com</p>
+				</div>
+
+				<div class="social">
+					<img class="social-links" src="img/social-links.svg" alt="">
+				</div>
+
+				<div class="copyright">
+					<p>© Matt Gelfand 2014</p>
+				</div>
 			</footer>
+
+
+
+		
 
 		</section><!--pagecontent-->
 	</div><!--container-->

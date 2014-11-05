@@ -96,8 +96,9 @@ NORMALIZE.css
 
 	html { 
 		min-height: 100%;
- 		background: url('../img/footer_lodyas.png') 0 0 repeat;
- 		font-family: 'tablet-gothic-wide';
+ 		font-family: "prenton-ultra-condensed";
+ 		font-weight: 200;
+ 		overflow-x:hidden;
 
 	}
 
@@ -113,10 +114,42 @@ NORMALIZE.css
 	.container {
 	 	min-height: 100%;
 	 	position: relative;
+	 	margin:0 auto;
 	}
 
+	.fadeIn {
+		opacity: 0;
+		-webkit-animation:fadeIn ease-in 1;
+		-moz-animation:fadeIn ease-in 1;
+		-ms-animation:fadeIn ease-in 1;
+		-o-animation:fadeIn ease-in 1;
+		animation:fadeIn ease-in 1;
+
+		-webkit-animation-fill-mode:forwards;
+		-moz-animation-fill-mode:forwards;
+		-ms-animation-fill-mode:forwards;
+		-o-animation-fill-mode:forwards;
+		animation-fill-mode:forwards;
+
+		-webkit-animation-duration: 1s;
+		-moz-animation-duration: 1s;
+		-ms-animation-duration: 1s;
+		-o-animation-duration: 1s;
+		animation-duration: 1s;
+	}
+	
+	@-webkit-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+	/*
 	.row:nth-child(even) {
-		background: #fff;
+		
 	}
 
 	.row:nth-child(odd) {     
@@ -124,23 +157,25 @@ NORMALIZE.css
 	}
 
 	.row {
-		padding: 4em 0;
-		-webkit-transform:skew(-10deg) rotate(-10deg) translateY(10px);
-		/*box-shadow: 0px -1px 3px rgba(0,0,0,0.4);*/
+		padding: 2em 0;
+		-webkit-transform:skew(-10deg) rotate(-10deg) translateY(-85px);
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0) scale(1.0, 1.0);
+		box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
 	}
 
 	.row > div {
-		-webkit-transform:skew(10deg) rotate(10deg) translateY(-10px);
+		
 	}
 
-	/*.row:first-of-type {
+	.row:first-of-type {
 		background: #e67e22;
 	}*/
 
 	.page-content {
-		
-		width: 100%;
+		width: 75%;
 		margin: 0 auto;
+		text-align: center;
 
 		-webkit-transition:.2s ease all;
 		-moz-transition:.2s ease all;
@@ -162,6 +197,14 @@ NORMALIZE.css
 		transition:1.2s ease all; 
 	}
 
+	.icons {
+		margin: 20px 0;
+	}
+
+	.icons li {
+		display: inline-block;
+		margin: 0 10px;
+	}
 
 	.common {
 		background: url('../img/post-its.jpg') 0 0 no-repeat;
@@ -215,70 +258,54 @@ NORMALIZE.css
 		font-weight: 200;
 	}
 
-	.home {
-		background: url('../img/footer_lodyas.png') 0 0 repeat;
-		-webkit-transform:skew(-10deg) rotate(-10deg) translateY(10px);
-		padding: 100px;
-		position: relative;
-	}
-
 	.process {
 		padding:3.2em 0;
 	}
-
-	.icons {
-		width: 150px;
-		display: inline-block;
-		position: absolute;
-		top:80px;
-		z-index: 1;
-		padding-right: 20px;
-		right: -20px;
-	}
-
-	.icons li {
-		
-		text-transform: uppercase;
-		padding: 5px 10px;
-		float: right;
-		right: 0;
-		
-	}
-
-	.icon-desc {
-		float:left;
-		vertical-align: middle;
-		position: relative;
-		top:10px;
-		right: 5px;
-		letter-spacing: 1px;
-		font-size: 12px;
-		color:#222;
-	}
 	
-	.contact-btm {
+	footer {
 		text-align: center;
-		background: red;
 		clear: both;
 		z-index: 1;
 		position: relative;
-		margin-top:-40px;
-		padding: 40px 0;
+		padding: 3.2em 0 1.6em 0;
+		text-transform: uppercase;
+	}
+
+	.lower-nav {
+		overflow: hidden;
+		padding:20px 0;
+	}
+
+	.lower-nav p {
+		display: inline-block;
+		text-align: center;
+		margin:0 20px;
+		font-size: 30px;
+	}
+
+	.email {
+		font-size: 20px;
+		text-align: center;
+		padding: 1.6em 0;
+	}
+
+	.social-links {
+		padding: 1.6em 0 2.4em 0;
 	}
 
 
 
 /*=============== Radio Toggle ==============*/
 
-	.overlay-2 {
+	.overlay {
 		position: fixed;
 		color:rgba(0, 0, 0, 0.7);
-		left:  -105%; /* how far below the viewport */
+		left:  -75%; /* how far below the viewport */
 		font-weight: 700;
 		text-align: center;
 		margin: 0 auto;
 		z-index: 3;
-		background: #fff;
+		background: white;
 		height: 100%;
 		width: 90%;
 		-webkit-transition:.3s ease all;
@@ -288,14 +315,14 @@ NORMALIZE.css
 		transition:.3s ease all;
 	}
 
-	.overlay-2 li {
+	.overlay li {
 		font-size: 2em;
 		margin: 2em 0;
 		color: #222;
 		font-weight: 200;
 	}
 
-	.menu-overlay:checked ~ .container .overlay-2 { /*how far from the bottom of the viewport text moves up*/
+	#toggle-icon:checked ~ .container .overlay { /*how far from the bottom of the viewport text moves up*/
 		left: 0;
 
 		-webkit-transition:.3s ease all;
@@ -305,21 +332,48 @@ NORMALIZE.css
 		transition:.3s ease all; 
 	}
 
-	.menu-overlay:checked ~ .container .page-content { /*how far from the bottom of the viewport text moves up*/
+	#toggle-icon:checked ~ .container .page-content { /*how far from the bottom of the viewport text moves up*/
 		-webkit-filter: grayscale(0.5);
 		opacity: .5;
+	}
+
+	#toggle-icon:checked ~ .container .dots {
+		display: none;
+		-webkit-transition:1.5s ease all;
+	}
+
+	#toggle-icon:checked ~ .container .cross {
+		display: block;
+		-webkit-transform:translateX(10px);
+		-webkit-transition:1.5s ease all;
+	}
+
+	.rotate {
+		position: absolute;
+		right:-4%;
+		bottom:10%;
+		font-size: 24px;
+		text-transform: uppercase;
+
+		-webkit-transform:rotate(-90deg);
+		-moz-transform:rotate(-90deg);
+		-ms-transform:rotate(-90deg);
+		-o-transform:rotate(-90deg);
+		transform:rotate(-90deg);
 	}
 
 	.cross {
 		font-size: 40px;
 		color: #222;
 		cursor: pointer;
+		display: none;
 	}
 
-	.dots {
-		font-size: 60px;
-		color:#fff;
-		padding:10px;
+	.dots, .cross {
+		font-size: 30px;
+		color:black;
+		position: absolute;
+		right: 5%;
 		cursor: pointer;
 	}
 
@@ -335,8 +389,8 @@ NORMALIZE.css
 		font-weight: 200;
 		letter-spacing: 2px;
 		cursor: pointer;
-		margin-left: -28px;
 		line-height: 1.3;
+		font-size: 90px;
 	}
 
 	.text-med {
@@ -352,7 +406,6 @@ NORMALIZE.css
 	.subhead {
 		text-transform: uppercase;
 		opacity: .6;
-		font-family: "tablet-gothic-wide";
 		font-weight: 400;
 		letter-spacing: 2px;
 	}
@@ -361,6 +414,35 @@ NORMALIZE.css
 		text-transform: uppercase;
 		font-size: 1.1em;
 		padding: 3.2em 0 0 0;
+	}
+
+	.text-small {
+		text-transform: uppercase;
+		font-size: 15px;
+		text-align: center;
+		font-weight: 200;
+	}
+
+	.footer-caps-head {
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 30px;
+		letter-spacing: 3px;
+	}
+
+	.footer-caps-subhead {
+		font-weight: 200;
+		text-transform: uppercase;
+		font-size: 12px;
+		letter-spacing: 1px;
+		opacity: .8;
+	}
+
+	.email-text {
+		font-weight: 300;
+		font-size: 20px;
+		text-align: center;
+		padding: .8em 0 1.6em 0;
 	}
 
 
