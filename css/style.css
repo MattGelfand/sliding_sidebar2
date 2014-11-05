@@ -333,8 +333,8 @@ NORMALIZE.css
 	}
 
 	#toggle-icon:checked ~ .container .page-content { /*how far from the bottom of the viewport text moves up*/
-		-webkit-filter: grayscale(0.5);
-		opacity: .5;
+		-webkit-filter: grayscale(0.9);
+		opacity: .1;
 	}
 
 	#toggle-icon:checked ~ .container .dots {
