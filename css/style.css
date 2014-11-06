@@ -31,7 +31,7 @@ NORMALIZE.css
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	
-	/*outline: 1px solid red;*/	
+	/*outline: 1px solid red;*/
 
 	}
 
@@ -146,50 +146,18 @@ NORMALIZE.css
 	}
 
 	.home {
-		max-width: 800px;
-		height: 400px;
-		margin: 0 auto;
+ 		height: 100vh;
+  		margin: 0 auto;
 		position: relative;
 	}
 
 	.home-inner {
-		font-size: 22px;
 		text-align: left;
 		position: absolute;
 		top:50%;
 		left:50%;
-		 
-		margin-left:-400px;
+		margin-left:-150px;
 	}
-
-
-
-	.row {
-		padding: 2em 0;
-		webkit-transform:skew(-10deg) rotate(-10deg) translateY(-85px);
-		webkit-backface-visibility: hidden;
-		webkit-transform: translateZ(0) scale(1.0, 1.0);
-		
-	}
-
-	/*.hero {
-		position: fixed;
-		top:-50%;
-		left:-50%;
-		width: 200%;
-		height: 200%;
-	}
-
-	.hero img {
-		position: absolute; 
-		top: 0; 
-		left: 0; 
-		right: 0; 
-		bottom: 0; 
-		margin: auto; 
-		min-width: 50%;
-		min-height: 50%;
-	}*/
 
 	.btn {
 		background: olive;
@@ -209,6 +177,44 @@ NORMALIZE.css
 		box-shadow: 0px 0px 0px 1px olive inset, 0px 0px 0px 2px white inset;
 	}
 
+
+	/*=============== Dumb Hover Effect ==============*/
+	
+	.effect a:before,
+	.effect a:after {
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+	}
+
+	.effect a:before {
+	margin-right: 10px;
+	content: '{';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+	.effect a:after {
+	margin-left: 10px;
+	content: '}';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+	.effect a:hover:before,
+	.effect a:hover:after,
+	.effect a:focus:before,
+	.effect a:focus:after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+	
 	.page-content {
 		margin:0 auto;
 		-webkit-transition:.2s ease all;
@@ -216,16 +222,7 @@ NORMALIZE.css
 		-ms-transition:.2s ease all;
 		-o-transition:.2s ease all;
 		transition:.2s ease all; 
-	}
-
-
-	
-
-	.img-size {
-		width: 400px;
-		height: 400px;
-		margin: 0;
-		padding: 0;
+		position: relative;
 	}
 
 	
@@ -256,60 +253,125 @@ NORMALIZE.css
 
 
 
+/*=============== Accordion ==============*/
+
+	.accordion {
+		text-align: left;
+		max-width: 1000px;
+	}
+
+	.accordion section > .accordion-content {
+		height: 0;
+		overflow: hidden;
+		-webkit-transition:height .75s;
+		-moz-transition:height .75s;
+		-ms-transition:height .75s;
+		-o-transition:height .75s;
+		transition:height .75s;
+	}
+
+	.accordion section:hover > .accordion-content {
+		height: 6em;
+	}
+
+	.accordion section:focus > .accordion-content {
+		height: 6em;
+	}
+
+	.accordion h1 {
+		cursor: pointer;
+		font-weight: 400;
+	}
+
+	.extra {
+		display: none;
+	}
+
+	.red {
+		background: red;
+	}
+
+
 
 
 /*=============== Radio Toggle ==============*/
 
-	.overlay {
-		position: fixed;
+	nav {
+		position: absolute;
 		color:rgba(0, 0, 0, 0.7);
-		top: -30%; /* how far below the viewport */
-		font-weight: 700;
-		text-align: center;
+	    right: 0;
+	    bottom: 5%;
 		margin: 0 auto;
 		z-index: 3;
-		height: 20%;
-		width: 100%;
-		-webkit-transition:.3s ease all;
+		-webkit-transition:.3s ease all;  
 		-moz-transition:.3s ease all;
 		-ms-transition:.3s ease all;
 		-o-transition:.3s ease all;
-		transition:.3s ease all;
+		transition:.3s ease all; 
 		 
 	}
 
-	.overlay li {
-		font-size: 2em;
-		text-align: center;
+	nav li {
+		font-size: 1em;
 		color: black;
+		margin: 0 1em;
 		font-weight: 400;
 		display: inline-block;
 	}
 
-	#toggle-icon:checked ~ .container .overlay { /*how far from the bottom of the viewport text moves up*/
-		top: 0;
+	.overlay {
+		position: fixed;
+		color:rgba(0, 0, 0, 0.7);
+		bottom: -90%;  /*how far below the viewport */
+		font-weight: 700;
+		right:0px;
+		text-align: center;
+		margin: 0 auto;
+		z-index: 3;
+		height: 90%;
+		width: 100%;
+ 		background: white;
 
-		-webkit-transition:.3s ease all;
+ 		-webkit-transition-delay: .3s;
+
+ 		-webkit-transition:.3s ease all;  
 		-moz-transition:.3s ease all;
 		-ms-transition:.3s ease all;
 		-o-transition:.3s ease all;
 		transition:.3s ease all; 
 	}
 
-	#toggle-icon:checked ~ .container .page-content { /*how far from the bottom of the viewport text moves up*/
-		-webkit-filter: grayscale(0.9);
-		opacity: .1;
+	#toggle-icon:checked ~ .container .overlay { /*how far from the bottom of the viewport text moves up*/
+		bottom: 0;
+ 
+		-webkit-transition:.3s ease all;
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 
+		
+		-webkit-transition-delay: .3s;
+		-moz-transition-delay: .3s;
+		-ms-transition-delay: .3s;
+		-o-transition-delay: .3s;
+		transition-delay: .3s;
 	}
 
-	#toggle-icon:checked ~ .container .dots {
-		display: none;
-		-webkit-transition:1.5s ease all;
+	#toggle-icon:checked ~ .container nav {
+		padding-bottom: 400px;
+		-webkit-transition-delay: .3s;
 	}
 
-	#toggle-icon:checked ~ .container .cross {
-		display: block;
-		-webkit-transform:translateX(10px);
-		-webkit-transition:1.5s ease all;
+	#toggle-icon:checked ~ .container .home-inner {
+		 
+		opacity: .5;
+		-webkit-filter: grayscale(0.5) blur(10px);
+		
+		-webkit-transition:.7s ease all;
+		-moz-transition:.7s ease all;
+		-ms-transition:.7s ease all;
+		-o-transition:.7s ease all;
+		transition:.7s ease all; 
 	}
 
 	.cross {
@@ -332,11 +394,20 @@ NORMALIZE.css
 		position: fixed;
 	}
 
+	label {
+		cursor: pointer;
+	}
+
 /*=============== Text Styles ==============*/
 
 	.header-text {
-		font-weight: 200;
-		font-size: 50px;
+		font-weight: 400;
+		font-size: 2em;
+	}
+
+	.subhead-text {
+		font-weight: 400;
+		font-size: .8em;
 	}
 
 	.graph-text {
@@ -362,18 +433,6 @@ NORMALIZE.css
 
 /*==================== OBJECTS ==================*/
 
-/*.center {
-	top:40%;
-	left:50%;
-	position: absolute;
-
-	-webkit-transform:translate(-50%, -50%);
-	-moz-transform:translate(-50%, -50%);
-	-ms-transform:translate(-50%, -50%);
-	-o-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-}
-*/
 	.contain {
 		padding:0 1.6em;
 		vertical-align: sub;
@@ -422,15 +481,62 @@ NORMALIZE.css
 	float: right; 
 	}
 
+	.home {
+		min-height: 100vh;
+	}
+
+	nav {
+		bottom: 5%;
+		right: 5%;
+	}
+
+	nav li {
+		font-size: 1.5em;
+		margin: 0 2em;
+		font-weight: 400;
+ 	}
+
+	.home {
+		height: 400px;
+		margin: 0 auto;
+		position: relative;
+		padding: 0;
+	}
+
+	.home-inner {
+		font-size: 22px;
+		text-align: left;
+		position: absolute;
+		top:30%;
+		left:50%;
+		margin-left:-310px;
+	}
+
+	#toggle-icon:checked ~ .container nav {
+		padding-bottom: 760px;
+	}
+
+/*=============== Text Styles ==============*/
+
+	.header-text {
+		font-weight: 400;
+		font-size: 3em;
+	}
+
+	.subhead-text {
+		font-weight: 400;
+		font-size: 1.6em;
+	}
+
+} /*end query*/
+
 	/*======= Custom Styles =======*
 
  
 
 /* Larger screen breakpoint (815px) */
 @media (min-width: 50rem) {	
-
-}
-
+	
 
 /* Larger screen breakpoint (960px) */
 @media (min-width: 70rem) {	
