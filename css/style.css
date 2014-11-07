@@ -88,7 +88,8 @@ NORMALIZE.css
 	}
 
 	a:active {
-
+		position: relative;
+		top: 1px;
 	}
 
 
@@ -99,6 +100,7 @@ NORMALIZE.css
  		/*font-family: "prenton-ultra-condensed";*/
  		font-family: "livory";
  		font-weight: 400;
+ 		overflow-y:hidden;
 	}
 
 	body {
@@ -112,6 +114,7 @@ NORMALIZE.css
 	 	min-height: 100%;
 	 	position: relative;
 	 	margin:0 auto;
+	 	padding: 0 .8em;
 	}
 
 	.fadeIn {
@@ -159,6 +162,21 @@ NORMALIZE.css
 		margin-left:-150px;
 	}
 
+	
+	.home-static {
+		opacity: 0;
+		text-align: center;
+		margin-bottom: 1.6em;
+	}	
+
+	.home-static h1 {
+		font-family: "open-sans";
+		font-weight: 200;
+		letter-spacing: 1px;
+		font-size: 10px;
+		text-transform: uppercase;
+	}
+
 	.btn {
 		background: olive;
 		font-size: 14px;
@@ -177,8 +195,213 @@ NORMALIZE.css
 		box-shadow: 0px 0px 0px 1px olive inset, 0px 0px 0px 2px white inset;
 	}
 
+	.page-content {
+		margin:0 auto;
+		-webkit-transition:.2s ease all;
+		-moz-transition:.2s ease all;
+		-ms-transition:.2s ease all;
+		-o-transition:.2s ease all;
+		transition:.2s ease all; 
+		position: relative;
+	}
 
-	/*=============== Dumb Hover Effect ==============*/
+	.row img {
+		float: left;
+		overflow: hidden;
+		-webkit-filter:grayscale(.2);
+		-webkit-transition:.2s ease-in-out;
+	}
+
+	.row img:hover {
+		-webkit-filter:grayscale(0);
+		-webkit-transition:.2s ease-in-out;
+	}
+
+	.picture-quarter img {
+		max-width: 100%;
+	}
+
+	
+	footer {
+		text-align: center;
+		clear: both;
+		z-index: 1;
+		position: relative;
+		padding: 3.2em 0 1.6em 0;
+		text-transform: uppercase;
+	}
+
+
+	
+
+
+
+/*=============== Radio Toggle ==============*/
+
+	nav {
+		position: absolute;
+		color:rgba(0, 0, 0, 0.7);
+	    right:0;
+	    bottom: 10%;
+		margin: 0 auto;
+		z-index: 3;
+		-webkit-transition:.3s ease all;  
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 	 
+	}
+
+	nav li {
+		font-size: 1em;
+		color: black;
+		margin: 0 1em;
+		font-weight: 400;
+		display: inline-block;
+	}
+
+	.overlay-about {
+		position: fixed;
+		color:rgba(0, 0, 0, 0.7);
+		bottom: -90%;  /*how far below the viewport */
+		font-weight: 700;
+		right:0px;
+		text-align: center;
+		margin: 0 auto;
+		z-index: 3;
+		height: 90%;
+		width: 100%;
+		padding: 0 1.2em;
+ 		background: transparent;
+
+ 		-webkit-transition-delay: .3s;
+
+ 		-webkit-transition:.8s ease all;  
+		-moz-transition:.8s ease all;
+		-ms-transition:.8s ease all;
+		-o-transition:.8s ease all;
+		transition:.8s ease all; 
+	}
+
+	#about-icon:checked ~ .container .overlay-about {
+		bottom: 0;
+ 
+		-webkit-transition:.3s ease all;
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 
+	}
+
+	#about-icon:checked ~ .container nav {
+		padding-bottom: 600px;
+		 
+
+		-webkit-transition:.3s ease all;
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 
+	}
+
+	.overlay {
+		position: fixed;
+		color:rgba(0, 0, 0, 0.7);
+		bottom: -90%;  /*how far below the viewport */
+		font-weight: 700;
+		right:0px;
+		text-align: center;
+		margin: 0 auto;
+		z-index: 3;
+		height: 90%;
+		width: 100%;
+		padding: 0 1.2em;
+ 		background: transparent;
+ 		overflow-y:scroll;
+
+ 		-webkit-transition-delay: .3s;
+
+ 		-webkit-transition:.3s ease all;  
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 
+	}
+
+	#toggle-icon:checked ~ .container .overlay { /*how far from the bottom of the viewport text moves up*/
+		bottom: 0;
+ 
+		-webkit-transition:.3s ease all;
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 
+		
+		-webkit-transition-delay: .3s;
+		-moz-transition-delay: .3s;
+		-ms-transition-delay: .3s;
+		-o-transition-delay: .3s;
+		transition-delay: .3s;
+	}
+
+	#toggle-icon:checked ~ .container nav {
+		padding-bottom: 600px;
+		-webkit-transition-delay: .3s;
+	}
+
+	#toggle-icon:checked ~ .container .home-inner {
+		 
+		opacity: .5;
+		-webkit-filter: grayscale(0.5) blur(10px);
+		
+		-webkit-transition:.7s ease all;
+		-moz-transition:.7s ease all;
+		-ms-transition:.7s ease all;
+		-o-transition:.7s ease all;
+		transition:.7s ease all; 
+	}
+
+	#toggle-icon:checked ~ .container .home-static {
+		opacity: 1;
+
+		-webkit-transition:.3s ease all;
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 
+		
+		-webkit-transition-delay: .3s;
+		-moz-transition-delay: .3s;
+		-ms-transition-delay: .3s;
+		-o-transition-delay: .3s;
+		transition-delay: .3s;
+	}
+
+	.dots {
+		font-size: 30px;
+		color:black;
+		position: absolute;
+		right: 5%;
+		cursor: pointer;
+	}
+
+	#toggle-icon, #toggle-icon-1 {
+		display: none;
+		position: fixed;
+	}
+
+	#about-icon, #about-icon-1 {
+		display: none;
+		position: fixed;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+
+
+/*=============== Dumb Hover Effect ==============*/
 	
 	.effect a:before,
 	.effect a:after {
@@ -215,41 +438,6 @@ NORMALIZE.css
 }
 
 	
-	.page-content {
-		margin:0 auto;
-		-webkit-transition:.2s ease all;
-		-moz-transition:.2s ease all;
-		-ms-transition:.2s ease all;
-		-o-transition:.2s ease all;
-		transition:.2s ease all; 
-		position: relative;
-	}
-
-	
-	footer {
-		text-align: center;
-		clear: both;
-		z-index: 1;
-		position: relative;
-		padding: 3.2em 0 1.6em 0;
-		text-transform: uppercase;
-	}
-
-	.lower-nav {
-		overflow: hidden;
-		padding:20px 0;
-	}
-
-	.lower-nav p {
-		display: inline-block;
-		text-align: center;
-		margin:0 20px;
-		font-size: 30px;
-	}
-
-	.social-links {
-		padding: 1.6em 0 2.4em 0;
-	}
 
 
 
@@ -258,6 +446,7 @@ NORMALIZE.css
 	.accordion {
 		text-align: left;
 		max-width: 1000px;
+		margin-top: 3.2em;
 	}
 
 	.accordion section > .accordion-content {
@@ -268,10 +457,14 @@ NORMALIZE.css
 		-ms-transition:height .75s;
 		-o-transition:height .75s;
 		transition:height .75s;
+		cursor: pointer;
+		margin:3.2em 0;
 	}
 
 	.accordion section:hover > .accordion-content {
-		height: 6em;
+		height: 15em;
+		background: blue;
+		-webkit-transition:3s ease-out all;
 	}
 
 	.accordion section:focus > .accordion-content {
@@ -280,123 +473,17 @@ NORMALIZE.css
 
 	.accordion h1 {
 		cursor: pointer;
+		text-indent: -2px;
 		font-weight: 400;
+		text-align: center;
+		font-size: 12px;
+		text-transform: uppercase;
 	}
 
 	.extra {
 		display: none;
 	}
 
-	.red {
-		background: red;
-	}
-
-
-
-
-/*=============== Radio Toggle ==============*/
-
-	nav {
-		position: absolute;
-		color:rgba(0, 0, 0, 0.7);
-	    right: 0;
-	    bottom: 5%;
-		margin: 0 auto;
-		z-index: 3;
-		-webkit-transition:.3s ease all;  
-		-moz-transition:.3s ease all;
-		-ms-transition:.3s ease all;
-		-o-transition:.3s ease all;
-		transition:.3s ease all; 
-		 
-	}
-
-	nav li {
-		font-size: 1em;
-		color: black;
-		margin: 0 1em;
-		font-weight: 400;
-		display: inline-block;
-	}
-
-	.overlay {
-		position: fixed;
-		color:rgba(0, 0, 0, 0.7);
-		bottom: -90%;  /*how far below the viewport */
-		font-weight: 700;
-		right:0px;
-		text-align: center;
-		margin: 0 auto;
-		z-index: 3;
-		height: 90%;
-		width: 100%;
- 		background: white;
-
- 		-webkit-transition-delay: .3s;
-
- 		-webkit-transition:.3s ease all;  
-		-moz-transition:.3s ease all;
-		-ms-transition:.3s ease all;
-		-o-transition:.3s ease all;
-		transition:.3s ease all; 
-	}
-
-	#toggle-icon:checked ~ .container .overlay { /*how far from the bottom of the viewport text moves up*/
-		bottom: 0;
- 
-		-webkit-transition:.3s ease all;
-		-moz-transition:.3s ease all;
-		-ms-transition:.3s ease all;
-		-o-transition:.3s ease all;
-		transition:.3s ease all; 
-		
-		-webkit-transition-delay: .3s;
-		-moz-transition-delay: .3s;
-		-ms-transition-delay: .3s;
-		-o-transition-delay: .3s;
-		transition-delay: .3s;
-	}
-
-	#toggle-icon:checked ~ .container nav {
-		padding-bottom: 400px;
-		-webkit-transition-delay: .3s;
-	}
-
-	#toggle-icon:checked ~ .container .home-inner {
-		 
-		opacity: .5;
-		-webkit-filter: grayscale(0.5) blur(10px);
-		
-		-webkit-transition:.7s ease all;
-		-moz-transition:.7s ease all;
-		-ms-transition:.7s ease all;
-		-o-transition:.7s ease all;
-		transition:.7s ease all; 
-	}
-
-	.cross {
-		font-size: 40px;
-		color: #222;
-		cursor: pointer;
-		display: none;
-	}
-
-	.dots, .cross {
-		font-size: 30px;
-		color:black;
-		position: absolute;
-		right: 5%;
-		cursor: pointer;
-	}
-
-	#toggle-icon, #toggle-icon-1 {
-		display: none;
-		position: fixed;
-	}
-
-	label {
-		cursor: pointer;
-	}
 
 /*=============== Text Styles ==============*/
 
@@ -512,8 +599,58 @@ NORMALIZE.css
 		margin-left:-310px;
 	}
 
+	.home-static {
+		position: absolute;
+		top:0;
+		left:0;
+		opacity: 0;
+		line-height: 2;
+
+		-webkit-transition:.3s ease all;
+		-moz-transition:.3s ease all;
+		-ms-transition:.3s ease all;
+		-o-transition:.3s ease all;
+		transition:.3s ease all; 
+	}
+
+	.home-static h1 {
+		font-size: 2em;
+	}
+
+	.overlay {
+		height: 80%;
+	}
+
 	#toggle-icon:checked ~ .container nav {
-		padding-bottom: 760px;
+		padding-bottom: 600px;
+	}
+
+	#toggle-icon:checked ~ .container .home-static {
+		-webkit-transform:translateX(20px);
+		-moz-transform:translateX(20px);
+		-ms-transform:translateX(20px);
+		-o-transform:translateX(20px);
+		transform:translateX(20px);
+	}
+
+	.quarter img {
+		max-width: 25%;
+	}
+
+	.third img {
+		max-width: 33%
+	}
+
+	.half img {
+		max-width: 50%;
+	}
+
+	.two-thirds img {
+		max-width: 66%;
+	}
+
+	.three-fourths img {
+		max-width: 75%;
 	}
 
 /*=============== Text Styles ==============*/

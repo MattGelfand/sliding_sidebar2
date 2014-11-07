@@ -14,8 +14,16 @@
 	<input type="radio" id="toggle-icon" name="toggle-group" value="overlay">
 	
 
+	<input type="radio" id="about-icon-1" name="toggle-group" value="close">
+	<input type="radio" id="about-icon" name="toggle-group" value="overlay">
+
 	<div class="container">
-		<div class="page-content fadeIn">	 
+		<div class="page-content fadeIn">
+			
+			<div class="home-static">
+				<h1><a href="#"><label for="toggle-icon-1">Matt Gelfand</label></a><h1>
+			</div>	 
+			
 			<div class="row clearfix">
 				<div class="column full">
 					<article class="home">
@@ -27,7 +35,7 @@
 						<nav role="navigation">
 							<ul> 
 								<li class="effect"><a href="#"><label for="toggle-icon">Work</label></a></li>
-								<li class="effect"><a href="#">About</a></li>
+								<li class="effect"><a href="#"><label for="about-icon">About/Contact</label></a></li>
 								<li class="effect"><a href="#">Lab</a></li>
 							</ul>
 						</nav>
@@ -35,51 +43,90 @@
 				</div>
 			</div>
 
-			<div class="row clearfix">
-				<div class="column full">
-							
+			
+		
+			<div class="overlay-about">
+				<div class="row clearfix">
+					<div class="column half">
+						<p>img</p>
+					</div>
 
-							<div class="overlay">
-								<label for="toggle-icon-1" class="dots">⋯</label>
-								<div class="accordion">
-									<section>
-										<h1>Common</h1>
-										<div class="accordion-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores beatae, quidem, odit, ad nemo omnis consequuntur perferendis laborum accusamus optio et, aliquam suscipit illo quam amet? Hic, est ipsa accusantium.</p>
+					<div class"column half">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime eum, atque soluta. Eos, at. Aliquid repudiandae nulla architecto doloremque, ut dignissimos sapiente dolores odit repellat sequi debitis, rem deleniti.</p>
 
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nobis itaque tempore error cum asperiores id quae consectetur beatae, placeat vero incidunt veniam dolorem enim iste animi, ab temporibus unde.</p>
-											<a class="btn" href="#">click</a>
-
-											<div class="extra">
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nobis itaque tempore error cum asperiores id quae consectetur beatae, placeat vero incidunt veniam dolorem enim iste animi, ab temporibus unde.</p>
-
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nobis itaque tempore error cum asperiores id quae consectetur beatae, placeat vero incidunt veniam dolorem enim iste animi, ab temporibus unde.</p>
-
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nobis itaque tempore error cum asperiores id quae consectetur beatae, placeat vero incidunt veniam dolorem enim iste animi, ab temporibus unde.</p>
-											</div>
-
-										</div>
-									</section>
-
-
-									<section>
-										<h1>Common</h1>
-										<div class="accordion-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores beatae, quidem, odit, ad nemo omnis consequuntur perferendis laborum accusamus optio et, aliquam suscipit illo quam amet? Hic, est ipsa accusantium.</p>
-										</div>
-									</section>
-
-									<section>
-										<h1>Common</h1>
-										<div class="accordion-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores beatae, quidem, odit, ad nemo omnis consequuntur perferendis laborum accusamus optio et, aliquam suscipit illo quam amet? Hic, est ipsa accusantium.</p>
-										</div>
-									</section>
-								</div><!--accordion-->
-							</div>
-
+						<label for="about-icon-1">close</label>
+					</div>
 				</div>
 			</div>
+
+			<div class="overlay">
+				<div class="row clearfix">
+					<div class"column full">
+						<picture class="half">
+						 	<a href="#">
+							<source srcset="img/looped-in-img.jpg" media="(min-width:1000px)">
+							 
+							<img srcset="img/looped-in-img.jpg" alt="">
+							</a>
+						</picture>
+				 
+						<picture class="quarter">
+						 	<a href="#">
+							<source srcset="img/sportscenter-img.jpg" media="(min-width:1000px)">
+							 	
+							<img srcset="img/sportscenter-img.jpg" alt="">
+							</a>
+					</picture>
+					 
+						<picture class="quarter">
+						 	<a href="#">
+							<source srcset="img/cutler-img.png" media="(min-width:1000px)">
+							 
+							<img srcset="img/cutler-img.png" alt="">
+							</a>
+						</picture>
+						 
+						<picture class="quarter">
+						 	<a href="#">
+							<source srcset="img/nbn-img.jpg" media="(min-width:1000px)">
+							 
+							<img srcset="img/nbn-img.jpg" alt="">
+							</a>
+						</picture>
+
+						<picture class="quarter">
+						 	<a href="#">
+							<source srcset="img/barreling-img.jpg" media="(min-width:1000px)">
+							 
+							<img srcset="img/barreling-img.jpg" alt="">
+							</a>
+						</picture>
+					</div>
+				</div>
+
+				<div class="row clearfix">
+					<div class"column full">
+
+					<picture class="half">
+					 	<a href="#">
+						<source srcset="img/fts-img.jpg" media="(min-width:1000px)">
+						 
+						<img srcset="img/fts-img.jpg" alt="">
+						</a>
+					</picture>
+
+					<picture class="half">
+						 	<a href="#">
+							<source srcset="img/backstory-img.jpg" media="(min-width:1000px)">
+							
+							<img srcset="img/backstory-img.jpg" alt="">
+						 	</a>
+						</picture>
+
+					</div>
+				</div>
+			</div><!--overlay-->
+
 
 
 		</div><!--page content-->
@@ -115,10 +162,3 @@
 </body>
 </html>
 
-
-
-	<!--<picture class="hero">
-			<source srcset="img/me.png" media="(min-width:1000px)">
-			<source srcset="img/me_small.png" media="(min-width:800px)">	
-			<img srcset="img/me_small.png" alt="an image of me looking upwards">
-		<picture>-->
