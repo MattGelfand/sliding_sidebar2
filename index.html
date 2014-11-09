@@ -10,33 +10,35 @@
 <!--remember to change favicon-->
 </head>
 <body>
-	<input type="radio" id="toggle-icon-1" name="toggle-group" value="close">
-	<input type="radio" id="toggle-icon" name="toggle-group" value="overlay">
+	<input type="radio" id="close-overlay" name="toggle-group" value="close">
+	
+	<input type="radio" id="work-icon" name="toggle-group" value="overlay">
+	<input type="radio" id="about-icon" name="toggle-group" value="overlay">
+	<input type="radio" id="lab-icon" name="toggle-group" value="overlay">
+
 	
 
-	<input type="radio" id="about-icon-1" name="toggle-group" value="close">
-	<input type="radio" id="about-icon" name="toggle-group" value="overlay">
-
 	<div class="container">
-		<div class="page-content fadeIn">
-			
-			<div class="home-static">
-				<h1><a href="#"><label for="toggle-icon-1">Matt Gelfand</label></a><h1>
-			</div>	 
+		<div class="page-content fadeIn">	 
 			
 			<div class="row clearfix">
 				<div class="column full">
-					<article class="home">
+					<div class="home">
 						<div class="home-inner">
 							<h1 class="header-text">Matt Gelfand.</h1>
-							<h2 class="subhead-text">Hybrid UX Design / Front-End Dev.</h2>
+							<span class="indent"><h2 class="subhead-text">Hybrid UX Design / Front-End Dev.</h2></span>
 						</div>
-
-						<nav role="navigation">
+						
+						<div class="logo-small-contain">
+							<h1 class="logo-small"<a href="#"><label for="close-overlay">Matt Gelfand</label></a></h1>
+						</div>
+						
+						<nav role="navigation"> 
 							<ul> 
-								<li class="effect"><a href="#"><label for="toggle-icon">Work</label></a></li>
+								<li class="logo-big"><a href="#"><label for="close-overlay">Matt Gelfand</label></a></li>
+								<li class="effect"><a href="#"><label for="work-icon">Work</label></a></li>
 								<li class="effect"><a href="#"><label for="about-icon">About/Contact</label></a></li>
-								<li class="effect"><a href="#">Lab</a></li>
+								<li class="effect"><a href="#"><label for="lab-icon">Lab</label></a></li>
 							</ul>
 						</nav>
 					</article>
@@ -45,21 +47,45 @@
 
 			
 		
-			<div class="overlay-about">
-				<div class="row clearfix">
-					<div class="column half">
-						<p>img</p>
+			<section class="overlay overlay-about">
+				<div class="row clearfix about-row">
+					<div class="column half flow-opposite">
+						<p class="about">I'm a UX designer with front-end chops raised in New Jersey residing in Boston who doesn't talk about himself in the third person. A writer in a former life, I recently earned a master's degree in interctive publishing from <a href="http://www.medill.northwestern.edu/msj/"><span class="link-br">this fine institution</span></a>. I cut my teeth at a <a href="http://knightlab.northwestern.edu/"><span class="link-br">software lab</span></a> helping to design apps to make journalists' lives easier, and shifted my focus to UX at <a href="www.freshtilledsoil.com"><span class="link-br">an agency</span></a> that's been a pioneer of the discipline for over a decade. 
+
+						I have a passion for manipulating the web and believe in the philosophy of building hastily and failing early, because your best idea is never your first. Other mantras: Steal like an artist, don't make users think, and always have a plan - without one you have no destination, and you can never arrive.</p>
 					</div>
+					
+					<div class="column half">
+						<img class="profile" src="img/about-img.jpg" alt="">
+					</div>	
+				</div><!--row-->
 
-					<div class"column half">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime eum, atque soluta. Eos, at. Aliquid repudiandae nulla architecto doloremque, ut dignissimos sapiente dolores odit repellat sequi debitis, rem deleniti.</p>
+				<div class="row clearfix footer">
+					<div class="column full">
+						<h1 class="email-text"><a href="mailto:matthew.gelfand@gmail.com?subject=Let's make something great!">matthew.gelfand<span class="faded">@</span>gmail.com</a></h1>
+						<div class="icons">
+							<ul>
+								<li><a href="https://github.com/MattGelfand"><img src="img/icon-github.svg" /></a></li>
+								<li><a href="http://instagram.com/instagelf"><img src="img/icon-insta.svg" /></a></li>
+								<li><a href="https://www.linkedin.com/in/matthewrgelfand"><img src="img/icon-linkedin.svg" /></a></li>
+								<li><a href="https://twitter.com/mattgelfand"><img src="img/icon-twitter.svg" /></a></li>
+								<li><a href="https://dribbble.com/mattgelfand"><img src="img/icon-dribbble.svg" /></a></li>
+							</ul>
+						</div>
+						<p class"super-subhead-text">© 2014 Matt Gelfand</p>
+					</div>
+				</div><!--row-->
+			</section><!--overlay about-->
 
-						<label for="about-icon-1">close</label>
+			<section class="overlay overlay-lab">
+				<div class="row clearfix">
+					<div class"column full">
+						<p class="about">Walter is currently in the lab churning out (blue) content for this space. Stay tuned.</p>
 					</div>
 				</div>
-			</div>
+			</section><!--overlay-lab-->
 
-			<div class="overlay">
+			<section class="overlay overlay-work">
 				<div class="row clearfix">
 					<div class"column full">
 						<picture class="half">
@@ -76,7 +102,7 @@
 							 	
 							<img srcset="img/sportscenter-img.jpg" alt="">
 							</a>
-					</picture>
+						</picture>
 					 
 						<picture class="quarter">
 						 	<a href="#">
@@ -102,59 +128,34 @@
 							</a>
 						</picture>
 					</div>
-				</div>
+				</div><!--row-->
 
 				<div class="row clearfix">
 					<div class"column full">
 
-					<picture class="half">
-					 	<a href="#">
-						<source srcset="img/fts-img.jpg" media="(min-width:1000px)">
-						 
-						<img srcset="img/fts-img.jpg" alt="">
-						</a>
-					</picture>
-
-					<picture class="half">
+						<picture class="half">
 						 	<a href="#">
-							<source srcset="img/backstory-img.jpg" media="(min-width:1000px)">
-							
-							<img srcset="img/backstory-img.jpg" alt="">
-						 	</a>
+							<source srcset="img/fts-img.jpg" media="(min-width:1000px)">
+							 
+							<img srcset="img/fts-img.jpg" alt="">
+							</a>
 						</picture>
 
+						<picture class="half">
+							 	<a href="#">
+								<source srcset="img/backstory-img.jpg" media="(min-width:1000px)">
+								
+								<img srcset="img/backstory-img.jpg" alt="">
+							 	</a>
+						</picture>
 					</div>
-				</div>
-			</div><!--overlay-->
+				</div><!--row-->
+			</section><!--overlay-->
 
 
 
 		</div><!--page content-->
 	</div><!--container-->
-
-			<!--<footer>
-					<div class="name">
-						<h1>Matt Gelfand</h1>
-						<p>UX &#8226; UI &#8226; Front-End Dev</p>
-					</div>
-
-					<div class="lower-nav">
-						<p>Work</p>|
-						<p>About</p>
-					</div>
-
-					<div class="email">
-						<p>matthew.gelfand@gmail.com</p>
-					</div>
-
-					<div class="social">
-						<img class="social-links" src="img/social-links.svg" alt="">
-					</div>
-
-					<div class="copyright">
-						<p>© Matt Gelfand 2014</p>
-					</div>
-				</footer>-->
 	
 
 <script src="js/plugins.js"></script>

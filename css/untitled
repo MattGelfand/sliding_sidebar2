@@ -1,0 +1,67 @@
+	.overlay-lab {
+		position: fixed;
+		color:rgba(0, 0, 0, 0.7);
+		bottom: -80%;  /*how far below the viewport */
+		text-align: left;
+		z-index: 3;
+		height: 80%;
+		width: 100%;
+ 		background: url('../img/walter.jpg') 50% 0 no-repeat;
+ 		background-size:cover;
+
+ 		-webkit-transition-delay: .3s;
+
+ 		-webkit-transition:.3s ease-in all;  
+		-moz-transition:.3s ease-in all;
+		-ms-transition:.3s ease-in all;
+		-o-transition:.3s ease-in all;
+		transition:.3s ease-in all;
+	}
+
+		.overlay-about {
+		position: fixed;
+		color:rgba(0, 0, 0, 0.7);
+		bottom: -80%;  /*how far below the viewport */
+		font-weight: 300;
+		font-size: 13px;
+		right:0px;
+		text-align: left;
+		z-index: 3;
+		height: 80%;
+		width: 100%;
+ 		background: white;
+ 		overflow-y:scroll;
+
+ 		-webkit-transition-delay: .3s;
+
+ 		-webkit-transition:.3s ease-in all;  
+		-moz-transition:.3s ease-in all;
+		-ms-transition:.3s ease-in all;
+		-o-transition:.3s ease-in all;
+		transition:.3s ease-in all;
+ 	}
+
+
+
+
+	.overlay {
+		position: fixed;
+		color:rgba(0, 0, 0, 0.7);
+		bottom: -80%;  /*how far below the viewport */
+		font-weight: 700;
+		right:0px;
+		text-align: left;
+		margin: 0 auto;
+		z-index: 3;
+		height: 80%;
+		width: 100%;
+ 		overflow: auto;
+
+ 		-webkit-transition-delay: .3s;
+
+ 		-webkit-transition:.3s ease-in all;  
+		-moz-transition:.3s ease-in all;
+		-ms-transition:.3s ease-in all;
+		-o-transition:.3s ease-in all;
+		transition:.3s ease-in all; 
+	}
