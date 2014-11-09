@@ -122,7 +122,7 @@ NORMALIZE.css
 	}
 
 	.fadeIn {
-		opacity: 0;
+	
 		-webkit-animation:fadeIn ease-in 1;
 		-moz-animation:fadeIn ease-in 1;
 		-ms-animation:fadeIn ease-in 1;
@@ -186,16 +186,18 @@ NORMALIZE.css
 	}
 
 	.logo-small {
-		font-family: 'open-sans';
-		font-weight: 200;
-		letter-spacing: 4px;
-		text-transform: uppercase;
-		font-size: 2em;
-		text-align: center;
-		padding-top: .8em;
+ 		padding-top: .8em;
 		max-width: 275px;
 		margin:0 auto;
 		opacity: 0;
+		line-height: .6;
+		font-size: 1.6em;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 600;
+		font-family: 'open-sans';
+		letter-spacing: 2px;
+		padding: 1.6em 0;
 
 		-webkit-transition:.5s ease all;
 		-moz-transition:.5s ease all;
@@ -273,19 +275,6 @@ NORMALIZE.css
 
 /*=============== Radio Toggle ==============*/
 
-
-	
-	
-	.overlay-target {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  z-index: 10;
-	  background-color: rgba(0,0,0,0.5); /*dim the background*/
-	}
-
 	.overlay {
 		position: fixed;
 		color:rgba(0, 0, 0, 0.7);
@@ -311,12 +300,10 @@ NORMALIZE.css
 	.overlay-lab {
  		background: url('../img/walter.jpg') 50% 0 no-repeat;
  		background-size:cover;
- 
 	}
 
 	.overlay-about {
  		background: white;
- 		overflow-y:scroll;
  	}
 
  	.overlay-about:after {
@@ -327,7 +314,7 @@ NORMALIZE.css
 		width: 0;
 		height: 0;
 		display: block;
-		bottom: 52px;
+		bottom: 128px;
 		margin-left: -16px;
 		border-left: 16px solid transparent;
 		border-right: 16px solid transparent;
@@ -402,7 +389,7 @@ NORMALIZE.css
 	 .overlay-about p {
  		padding: 0 1.6em 1.6em 1.6em;
  		font-size: 1.2em;
- 		line-height: 1.6;
+ 		line-height: 1.7;
  		font-family: "livory";
  	}
 
@@ -516,14 +503,25 @@ NORMALIZE.css
 
 /*=============== Text Styles ==============*/
 
-	.header-text {
+	.home-head-text {
+		font-family: 'livory';
+		font-size: 2.4em;
 		font-weight: 400;
+	}
+
+	.header-text {
+		font-weight: 600;
 		font-size: 2em;
+		font-family: 'open-sans';
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		display: none;
 	}
 
 	.subhead-text {
 		font-weight: 400;
 		font-size: .8em;
+		text-indent: 2px;
 	}
 
 	.graph-text {
@@ -540,12 +538,12 @@ NORMALIZE.css
 
 	.email-text {
 		font-size: 1.2em;
-		text-transform: uppercase;
 		text-align: center;
 		font-weight: 600;
 		font-family: 'open-sans';
 		letter-spacing: 2px;
 		padding: 1.6em 0;
+		text-transform: uppercase;
 	}
 
 
@@ -627,11 +625,15 @@ NORMALIZE.css
 		left: -120%;
 		opacity: 0;
 		display: block;
-		font-family: 'open-sans';
-		font-weight: 800;
 		font-size: 2em;
 		line-height: .6;
+		max-width: 275px;
+		margin:0 auto;
 		text-transform: uppercase;
+		font-weight: 600;
+		font-family: 'open-sans';
+		letter-spacing: 2px;
+		
 
 		-webkit-transition:.3s ease all;
 		-moz-transition:.3s ease all;
@@ -656,9 +658,9 @@ NORMALIZE.css
 
 	.about {
 		border:1px solid #222;
-		padding: 1em;
 		color:#222;
 		background:white;
+		padding: 1.6em;
 	}
 
 	.overlay-about:after {
@@ -666,29 +668,17 @@ NORMALIZE.css
 		border-top: 16px solid black;
 	}
 
-	.overlay-about p {
-		padding: 3.2em;
-	}
-
 	.footer {
 		background: white;
 	}
 
-	/*#work-icon:checked ~ .container .logo {
-		-webkit-transform:translateX(20px);
-		-moz-transform:translateX(20px);
-		-ms-transform:translateX(20px);
-		-o-transform:translateX(20px);
-		transform:translateX(20px);
+	#work-icon:checked ~ .container .logo-big, #about-icon:checked ~ .container .logo-big, #lab-icon:checked ~ .container .logo-big{
+		-webkit-transform:translateX(55px);
+		-moz-transform:translateX(55px);
+		-ms-transform:translateX(55px);
+		-o-transform:translateX(55px);
+		transform:translateX(55px);
 	}
-
-	#about-icon:checked ~ .container .logo {
-		-webkit-transform:translateX(20px);
-		-moz-transform:translateX(20px);
-		-ms-transform:translateX(20px);
-		-o-transform:translateX(20px);
-		transform:translateX(20px);
-	}*/
 
 	.quarter img {
 		max-width: 25%;
@@ -713,8 +703,10 @@ NORMALIZE.css
 /*=============== Text Styles ==============*/
 
 	.header-text {
-		font-weight: 400;
 		font-size: 3em;
+		text-indent: 24px;
+		padding-bottom: .8em;
+		display: block;
 	}
 
 	.subhead-text {
