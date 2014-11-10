@@ -10,94 +10,82 @@
 <!--remember to change favicon-->
 </head>
 <body>
+	<!--closers-->
 	<input type="radio" id="close-overlay" name="toggle-group" value="close">
+	<input type="radio" id="close-modal" name="modal-group" value="close">
+	<input type="radio" id="close-super" name="superbutton" value="close">
 	
+	<!--nav openers-->
 	<input type="radio" id="work-icon" name="toggle-group" value="overlay">
 	<input type="radio" id="about-icon" name="toggle-group" value="overlay">
 	<input type="radio" id="lab-icon" name="toggle-group" value="overlay">
+	
+	<!--gallery openers-->
+	<input type="radio" id="loopedin-click" name="modal-group" value="modal">
 
+	<!--super button-->
+	<input type="radio" id="superbutton" name="superbutton" value="super">
 	
 
 	<div class="container">
 		<div class="page-content fadeIn">	 
-			
-			<div class="row clearfix">
-				<div class="column full">
-					<div class="home">
-						<div class="home-inner">
-							<h1 class="home-head-text">Matt Gelfand</h1>
-							<span class="indent"><h2 class="subhead-text">Hybrid UX Design / Front-End Dev</h2></span>
-						</div>
-						
-						<div class="logo-small-contain">
-							<h1 class="logo-small"<a href="#"><label for="close-overlay">Matt Gelfand</label></a></h1>
-						</div>
-						
-						<nav role="navigation"> 
-							<ul> 
-								<li class="logo-big"><a href="#"><label for="close-overlay">Matt Gelfand</label></a></li>
-								<li class="effect"><a href="#"><label for="work-icon">Work</label></a></li>
-								<li class="effect"><a href="#"><label for="about-icon">About/Contact</label></a></li>
-								<li class="effect"><a href="#"><label for="lab-icon">Lab</label></a></li>
-							</ul>
-						</nav>
-					</article>
-				</div>
-			</div>
-
-			
+							
 		
-			<section class="overlay overlay-about">
-				<div class="row clearfix about-row">
-					<div class="column half flow-opposite">
-						<div class="about">
-						<span class="indent"><h1 class="header-text">About</h1></span>
-						<p>I'm a UX designer with front-end chops raised in New Jersey residing in Boston. A writer in a former life, I recently earned a master's degree in interctive publishing from <a href="http://www.medill.northwestern.edu/msj/"><span class="link-br">this fine institution</span></a>. I cut my teeth at a <a href="http://knightlab.northwestern.edu/"><span class="link-br">software lab</span></a> helping to design apps to make journalists' lives easier. I then shifted my focus to UX at <a href="www.freshtilledsoil.com"><span class="link-br">an agency</span></a> that's been a pioneer of the discipline for over a decade.
-
-						I have a passion for manipulating the web and believe in the philosophy of building hastily and failing early, because your best idea is never your first. Other mantras: Steal like an artist, don't make users think, and always have a plan - without one you have no destination, which means you can never arrive.</p>
+			 
+					<label for="superbutton" id="super-open">
+						<div class="nav-holder">
+							<div class="nav-holder-inner"><span class="MG">mg</span>
+							<label for="close-super" id="super-close">✖</label>
+								<ul> 
+									<li class="effect"><a class="work" href="#"><label for="work-icon">✆</label></a></li>
+									<li class="effect"><a href="#"><label for="about-icon">☻</label></a></li>
+									<li class="effect"><a href="#"><label for="lab-icon">☹</label></a></li>
+								</ul>
+							</div>
 						</div>
-					</div>
-					
-					<div class="column half">
-						<img class="profile" src="img/about-img.jpg" alt="">
-					</div>	
-				</div><!--row-->
+					</label>
 
-				<div class="row clearfix footer">
-					<div class="column full">
-						<h1 class="email-text"><a href="mailto:matthew.gelfand@gmail.com?subject=Let's make something great!">matthew.gelfand<span class="faded">@</span>gmail.com</a></h1>
-						<div class="icons">
-							<ul>
-								<li><a href="https://github.com/MattGelfand"><img src="img/icon-github.svg" /></a></li>
-								<li><a href="http://instagram.com/instagelf"><img src="img/icon-insta.svg" /></a></li>
-								<li><a href="https://www.linkedin.com/in/matthewrgelfand"><img src="img/icon-linkedin.svg" /></a></li>
-								<li><a href="https://twitter.com/mattgelfand"><img src="img/icon-twitter.svg" /></a></li>
-								<li><a href="https://dribbble.com/mattgelfand"><img src="img/icon-dribbble.svg" /></a></li>
-							</ul>
-						</div>
-						<p class"super-subhead-text">© 2014 Matt Gelfand</p>
-					</div>
-				</div><!--row-->
-			</section><!--overlay about-->
 
-			<section class="overlay overlay-lab">
+			 
+			 
+			<section class="overlay overlay-work active">
+				<label for="close-modal" id="gallery-close">✖</label>
 				<div class="row clearfix">
 					<div class"column full">
-						<p class="about">Walter is currently working hard in the lab churning out (blue) content for this space. Stay tuned.</p>
-					</div>
-				</div>
-			</section><!--overlay-lab-->
+							<article class="gallery-overlay loopedin-overlay contain">
+								<h1 class="header-text spacing">looped in</h1>
+								
+								<div class="spacing">
+								<h2 class="subhead-text">Client</h2>
+								<p>looped-in</p>
+								</div>
 
-			<section class="overlay overlay-work">
-				<div class="row clearfix">
-					<div class"column full">
+								<div class="spacing">
+								<h2 class="subhead-text">Role</h2>
+								<p>Strategy, UI</p>
+								</div>
+								
+								<div class="spacing">
+								<h2 class="subhead-text">Setting</h2>
+								<p>Fresh Tilled Soil</p>
+								</div>
+								
+
+								<p class="graph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, est facilis optio cupiditate illo. Dolorem, ratione modi, corrupti doloremque, assumenda voluptas incidunt, culpa nisi quos necessitatibus hic laudantium distinctio praesentium?</p>
+
+								<p class="graph-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, est facilis optio cupiditate illo. Dolorem, ratione modi, corrupti doloremque, assumenda voluptas incidunt, culpa nisi quos necessitatibus hic laudantium distinctio praesentium?</p>
+							</article>
+						
 						<picture class="half">
 						 	<a href="#">
-							<source srcset="img/looped-in-img.jpg" media="(min-width:1000px)">
-							 
-							<img srcset="img/looped-in-img.jpg" alt="">
+							 	<label for="loopedin-click">
+									<source srcset="img/looped-in-img.jpg" media="(min-width:1000px)">
+									<img srcset="img/looped-in-img.jpg" alt="">
+								</label>
 							</a>
 						</picture>
+
+						
 				 
 						<picture class="quarter">
 						 	<a href="#">
@@ -130,7 +118,7 @@
 							<img srcset="img/barreling-img.jpg" alt="">
 							</a>
 						</picture>
-					</div>
+					</div><!--column-->
 				</div><!--row-->
 
 				<div class="row clearfix">
@@ -155,6 +143,48 @@
 				</div><!--row-->
 			</section><!--overlay-->
 
+			
+		
+			<section class="overlay overlay-about">
+				<div class="row clearfix about-row">
+					<div class="column half flow-opposite">
+						<div class="about">
+						<span class="indent"><h1 class="header-text hidden">About</h1></span>
+						<p>I'm a UX designer with front-end chops raised in New Jersey residing in Boston. A writer in a former life, I recently earned a master's degree in interctive publishing from <a href="http://www.medill.northwestern.edu/msj/"><span class="link-br">this fine institution</span></a>. I cut my teeth at a <a href="http://knightlab.northwestern.edu/"><span class="link-br">software lab</span></a> helping to design apps to make journalists' lives easier. I then shifted my focus to UX at <a href="www.freshtilledsoil.com"><span class="link-br">an agency</span></a> that's been a pioneer of the discipline for over a decade.
+
+						I have a passion for manipulating the web and believe in the philosophy of building hastily and failing early, because your best idea is never your first. Other mantras: Steal like an artist, don't make users think, and always have a plan - without one you have no destination, which means you can never arrive.</p>
+						</div>
+					</div>
+					
+					<div class="column half">
+						<img class="profile" src="img/about-img.jpg" alt="">
+					</div>	
+				</div><!--row-->
+
+				<div class="row clearfix footer">
+					<div class="column full">
+						<h1 class="email-text"><a href="mailto:matthew.gelfand@gmail.com?subject=Let's make something great!">matthew.gelfand<span class="faded">@</span>gmail.com</a></h1>
+						<div class="icons">
+							<ul>
+								<li><a href="https://github.com/MattGelfand"><img src="img/icon-github.svg" /></a></li>
+								<li><a href="http://instagram.com/instagelf"><img src="img/icon-insta.svg" /></a></li>
+								<li><a href="https://www.linkedin.com/in/matthewrgelfand"><img src="img/icon-linkedin.svg" /></a></li>
+								<li><a href="https://twitter.com/mattgelfand"><img src="img/icon-twitter-opt.svg" /></a></li>
+								<li><a href="https://dribbble.com/mattgelfand"><img src="img/icon-dribbble.svg" /></a></li>
+							</ul>
+						</div>
+						<p class"super-subhead-text">© 2014 Matt Gelfand</p>
+					</div>
+				</div><!--row-->
+			</section><!--overlay about-->
+
+			<section class="overlay overlay-lab">
+				<div class="row clearfix">
+					<div class"column full">
+						<p>Walter is currently working hard in the lab to raise the purity of the content  on this page. Stay tuned.</p>
+					</div>
+				</div>
+			</section><!--overlay-lab-->
 
 
 		</div><!--page content-->
